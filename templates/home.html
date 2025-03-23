@@ -1,0 +1,363 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Almaz Akzholtoev - Resume</title>
+
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        />
+        <!-- Font Awesome for icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            integrity="sha512-..."
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <!-- Custom CSS (optional) -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+        <style>
+            /* Inline styles for a vibrant look — feel free to move these into style.css */
+            body {
+                background-color: #f5f7fa;
+                color: #333;
+                font-family: "Open Sans", sans-serif;
+            }
+            /* Hero section with a gradient background */
+            .hero {
+                background: linear-gradient(135deg, #06beb6, #48b1bf);
+                color: #fff;
+                padding: 100px 0;
+                text-align: center;
+            }
+            .hero img {
+                border: 3px solid #fff;
+            }
+            .hero h1 {
+                font-size: 3rem;
+                margin-top: 1rem;
+            }
+            .hero p {
+                font-size: 1.2rem;
+                margin-top: 0.5rem;
+            }
+
+            /* Section headings */
+            section h2 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+                position: relative;
+            }
+            section h2::after {
+                content: "";
+                width: 60px;
+                height: 3px;
+                background-color: #48b1bf;
+                display: block;
+                margin: 0.5rem auto 1rem auto;
+            }
+
+            /* Skills icons */
+            .skill-icon {
+                font-size: 2rem;
+                color: #48b1bf;
+                margin-bottom: 0.5rem;
+            }
+
+            /* Social Icons in Footer */
+            .social-icons a {
+                color: #48b1bf;
+                font-size: 1.5rem;
+                margin: 0 0.5rem;
+                transition: color 0.3s ease;
+            }
+            .social-icons a:hover {
+                color: #06beb6;
+            }
+
+            /* Footer */
+            footer {
+                background-color: #fff;
+                padding: 1rem 0;
+                text-align: center;
+                color: #666;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav
+            class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm"
+        >
+            <div class="container">
+                <!-- Brand on the left -->
+                <a class="navbar-brand fw-bold" href="#">Almaz Akzholtoev</a>
+
+                <!-- Toggler on the right for mobile -->
+                <button
+                    class="navbar-toggler ms-auto"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Centered navigation links -->
+                <div
+                    class="collapse navbar-collapse position-absolute top-10 start-50 translate-middle-x"
+                    id="navbarSupportedContent"
+                >
+                    <ul class="navbar-nav">
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="#education">Education</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="#experience"
+                                >Experience</a
+                            >
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="hero" id="home">
+            <div class="container">
+                <img
+                    src="{% static 'images/profile1.jpg' %}"
+                    alt="Almaz Akzholtoev"
+                    class="rounded-circle"
+                    style="
+                        width: 250px;
+                        height: 250px;
+                        object-fit: cover;
+                        object-position: 50% 50%;
+                    "
+                />
+
+                <h1 class="mt-4">Almaz Akzholtoev</h1>
+                <p class="lead">Passionate Web Developer & Innovator</p>
+                <p>
+                    <em>
+                        “Building modern, scalable solutions with clean code and
+                        user-friendly design.”
+                    </em>
+                </p>
+            </div>
+        </header>
+
+        <main>
+            <!-- About Section -->
+            <section class="container py-5 text-center" id="about">
+                <h2 class="">About Me</h2>
+                <p>
+                    Hi, I'm Almaz Akzholtoev, a 17-year-old Web Developer
+                    specializing in React and Python. I hold a associate degree
+                    in Computer Science. I have experience working in agile
+                    development teams. My passion lies in crafting innovative
+                    solutions, and continuously enhancing user experiences.
+                    Outside of coding, I still study in college.
+                </p>
+            </section>
+
+            <!-- Education Section -->
+            <section
+                class="container py-5 bg-light shadow-sm rounded-0 container text-center"
+                id="education"
+            >
+                <h2>Education</h2>
+                <ul class="list-unstyled">
+                    <li class="mb-3">
+                        <h5 class="fw-bold">
+                            Associate Degree in Computer Science
+                        </h5>
+                        <p class="mb-1">
+                            Technical School of Innovation, 2022 - 2025
+                        </p>
+                        <p class="text-muted">
+                            Specialized in Software Engineering and Data
+                            Structures.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="container py-5" id="skills">
+                <h2 class="text-center">Skills</h2>
+                <div class="row text-center">
+                    <!-- Skill 1 -->
+                    <div class="col-md-3 mb-4">
+                        <i class="fab fa-python skill-icon"></i>
+                        <h5 class="mt-2">Python</h5>
+                        <p class="text-muted">Django, Flask, Data Analysis</p>
+                    </div>
+                    <!-- Skill 2 -->
+                    <div class="col-md-3 mb-4">
+                        <i class="fab fa-react skill-icon"></i>
+                        <h5 class="mt-2">React</h5>
+                        <p class="text-muted">SPA Development, Hooks, Redux</p>
+                    </div>
+                    <!-- Skill 3 -->
+                    <div class="col-md-3 mb-4">
+                        <i class="fas fa-database skill-icon"></i>
+                        <h5 class="mt-2">Databases</h5>
+                        <p class="text-muted">SQLite</p>
+                    </div>
+                    <!-- Skill 4 -->
+                    <div class="col-md-3 mb-4">
+                        <i class="fab fa-git-alt skill-icon"></i>
+                        <h5 class="mt-2">Git & GitHub</h5>
+                        <p class="text-muted">Version Control, CI/CD</p>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <!-- Skill 5 -->
+                    <div class="col-md-3 mb-4">
+                        <i class="fab fa-html5 skill-icon"></i>
+                        <h5 class="mt-2">HTML5</h5>
+                        <p class="text-muted">Semantic Markup</p>
+                    </div>
+                    <!-- Skill 6 -->
+                    <div class="col-md-3 mb-4">
+                        <i class="fab fa-css3-alt skill-icon"></i>
+                        <h5 class="mt-2">CSS3</h5>
+                        <p class="text-muted">Responsive Design</p>
+                    </div>
+                    <!-- Skill 7 -->
+                    <div class="col-md-3 mb-4">
+                        <i class="fab fa-js-square skill-icon"></i>
+                        <h5 class="mt-2">JavaScript</h5>
+                        <p class="text-muted">DOM Manipulation</p>
+                    </div>
+                    <!-- Skill 8 -->
+                    <div class="col-md-3 mb-4">
+                        <i class="fas fa-code skill-icon"></i>
+                        <h5 class="mt-2">C#</h5>
+                        <p class="text-muted"></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="container py-5 text-center" id="experience">
+                <h2>Experience</h2>
+                <div class="row">
+                    <div class="mb-4">
+                        <h5 class="fw-bold">React Native Developer @ EneTyl</h5>
+                        <span class="text-muted">2025 – College Project</span>
+                        <p>
+                            Development of an intuitive and responsive mobile
+                            application for learning Kyrgyz language using React
+                            Native and Expo. Implemented advanced navigation,
+                            animated screens, integration with backend via REST
+                            API and optimized the user interface for high
+                            performance on Android and iOS. Close working
+                            closely with designers to accurately realize Figma
+                            layouts and customization for different devices.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="container py-5" id="contact">
+                <h2 class="text-center">Contact</h2>
+                <p>
+                    Interested in collaborating or have a project idea? Let’s
+                    talk!
+                </p>
+                <form method="post" action="">
+                    <!-- If using Django's form, you'll replace this with {{ form.as_p }} -->
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="name"
+                            name="name"
+                            placeholder="Your Name"
+                            required
+                        />
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            name="email"
+                            placeholder="Your Email"
+                            required
+                        />
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea
+                            class="form-control"
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Write your message here..."
+                            required
+                        ></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        Send Message
+                    </button>
+                </form>
+            </section>
+        </main>
+
+        <!-- Footer with Social Icons -->
+        <footer>
+            <div class="social-icons mb-2">
+                <a
+                    href="https://github.com/Almaz192"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fab fa-github"></i
+                ></a>
+                <a
+                    href="https://linkedin.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fab fa-linkedin"></i
+                ></a>
+                <a
+                    href="https://twitter.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fab fa-twitter"></i
+                ></a>
+            </div>
+            <p>&copy; 2025 Almaz Akzholtoev. All rights reserved.</p>
+        </footer>
+
+        <!-- Bootstrap JS (with Popper) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
